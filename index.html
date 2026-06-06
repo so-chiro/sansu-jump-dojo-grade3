@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>算数ジャンプ道場3年</title>
+  <meta name="description" content="日本文教出版3年算数の単元に合わせた、学習後の考えるチャレンジ。">
+  <link rel="stylesheet" href="style.css?v=20260606-concepts">
+</head>
+
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">終わった人のチャレンジ</p>
+      <h1>算数ジャンプ道場3年</h1>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="work-panel">
+      <div class="unit-hero">
+        <div>
+          <p id="unit-category" class="unit-category">数と計算</p>
+          <h2 id="unit-title">かけ算</h2>
+          <p id="unit-subtitle" class="unit-subtitle"></p>
+        </div>
+        <div class="unit-meter" aria-label="この単元の進み具合">
+          <span id="unit-meter-text">0/5</span>
+          <div class="meter-track"><div id="unit-meter-bar" class="meter-bar"></div></div>
+        </div>
+      </div>
+
+      <nav id="level-tabs" class="level-tabs" aria-label="レベル選択"></nav>
+      <div id="unit-list" class="unit-list" hidden></div>
+
+      <article class="challenge-card">
+        <section id="level-work" class="level-work">
+          <aside class="task-panel">
+          <div class="side-controls" aria-label="名前と単元">
+              <label>
+                <span>名前</span>
+                <input id="student-name" class="text-input" type="text" placeholder="名前">
+              </label>
+              <label>
+                <span>単元</span>
+                <select id="unit-select" class="select-input"></select>
+              </label>
+              <div class="side-actions">
+                <button id="btn-reset-unit" class="ghost-btn" type="button">この単元をリセット</button>
+              </div>
+              <div class="top-progress">
+                <span>ぜんぶ</span>
+                <strong id="progress-total" class="progress-total">0%</strong>
+              </div>
+            </div>
+            <div class="challenge-top">
+              <div>
+                <p id="level-label" class="level-label">レベル 1</p>
+                <h3 id="level-title">意味を説明する</h3>
+              </div>
+            </div>
+            <p id="question-text" class="question-text"></p>
+
+            <div id="hint-box" class="hint-box">
+              <p class="hint-title">ことばカード（クリックで出す）</p>
+              <div id="keyword-list" class="keyword-list"></div>
+            </div>
+          </aside>
+
+          <section class="structure-section" aria-label="Q・N・Kをつなげるボード">
+            <div class="structure-head">
+              <div>
+                <p class="board-kicker">N・K ボード</p>
+                <h4>ことばをうごかして、つながりを作る</h4>
+              </div>
+              <div class="board-actions">
+                <button id="btn-line-mode" class="small-btn ghost-small" type="button">線つなぎ</button>
+                <button id="btn-add-note" class="small-btn" type="button">メモをふやす</button>
+                <button id="btn-reset-board" class="small-btn ghost-small" type="button">ボードをもどす</button>
+              </div>
+            </div>
+            <div id="structure-board" class="structure-board">
+              <svg id="board-lines" class="board-lines" aria-hidden="true"></svg>
+            </div>
+            <div class="board-help">
+              <span>線ラベルをえらんで、ことばを入れる</span>
+              <div id="connector-palette" class="connector-palette" aria-label="線のことば候補"></div>
+            </div>
+          </section>
+
+          <div class="answer-section">
+            <label class="field-label answer-label" for="answer-input">自分のせつめい（S）</label>
+            <textarea id="answer-input" class="answer-input" placeholder="ことばのつながりを使って、自分のことばでせつめいしよう。"></textarea>
+          </div>
+        </section>
+
+        <section id="final-work" class="final-work" hidden>
+          <aside class="task-panel final-side">
+            <div class="side-controls" aria-label="名前と単元">
+              <label>
+                <span>名前</span>
+                <input id="student-name-final" class="text-input mirror-name" type="text" placeholder="名前" readonly>
+              </label>
+              <label>
+                <span>単元</span>
+                <input id="unit-name-final" class="text-input mirror-unit" type="text" readonly>
+              </label>
+            </div>
+          </aside>
+          <div class="challenge-top">
+            <div>
+              <p class="level-label">レベル 5</p>
+              <h3>これまでに書いたことを見て、さいごにまとめる</h3>
+            </div>
+          </div>
+          <div id="answer-review-list" class="answer-review-list"></div>
+          <section class="summary-panel">
+            <div>
+              <p class="level-label">まとめ</p>
+              <h3>今日のジャンプまとめ</h3>
+            </div>
+            <textarea id="summary-input" class="summary-input" placeholder="Lv1〜Lv4で書いたことを見直して、この単元でいちばん大事だと思った考えをまとめよう。"></textarea>
+          </section>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js?v=20260606-concepts"></script>
+</body>
+
+</html>
