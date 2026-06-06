@@ -459,7 +459,7 @@ h1 {
   border: 2px solid #e1b94a;
   background: #fff2bf;
   overflow: auto;
-  max-height: 180px;
+  max-height: 138px;
   flex: 0 0 auto;
 }
 
@@ -1078,7 +1078,7 @@ h1 {
   }
 
   .hint-box {
-    max-height: 142px;
+    max-height: 112px;
     padding: 7px;
   }
 
